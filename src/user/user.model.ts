@@ -1,16 +1,7 @@
-import { model, Schema } from "mongoose"
+import { model, Schema } from "mongoose";
+import { UserDocument } from "./user.interface";
 
-export interface UserInput {
-    name: string, 
-    email: string, 
-    password: string
-}
 
-export interface UserDocument  extends  UserInput, Document {
-    createAt: Date, 
-    updateAt: Date, 
-    deleteAt: Date
-}
 
 const userSchema  = new Schema({
     name: {type: String, required: true }, 
